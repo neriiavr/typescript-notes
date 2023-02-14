@@ -1,0 +1,97 @@
+Intro01 
+
+
+
+
+intro.ts
+
+let user = {name: "neri", age: 10}
+
+console.log("Neri");
+console.log(user.name);
+
+
+
+
+
+variableMe.ts 
+
+let greetings: string = "Hi Neri";
+console.log(greetings);
+
+//number
+
+let userId: number = 334455.3
+
+//boolean 
+
+let isLoggedIn: boolean = false
+
+let userId = 334455.3
+
+userId.toFixed()
+
+
+// any 
+
+let hero; // avoid this situation where tsc has no idea about what to come up in future
+          // give the type from the beginning instead, let hero: string;
+
+          // any is not type checked  
+
+function getHero() {
+    return "thor"
+}
+
+hero = getHero()
+
+
+
+
+myFunctions.ts 
+
+function addTwo(num) { // bu haliyle any, to fix =>  funtion addTwo(num: number) { 
+    return num + 2
+}
+
+function getUpper(val) { // it is a problem that typescript doesnt create a problem. dogrusu => function getUpper(val: string) {
+    return val.toUpperCase()
+}
+
+function signUpUser(name: string, email: string, isPaid: boolean) {}
+
+let loginUser = (name: string, email: string, isPaid: boolean = false ) => {}
+
+addTwo(5)
+getUpper("4")
+
+signUpUser("neri", "neri@something", false )
+loginUser("n", "n@n.com")
+
+// How can I return more accurate value 
+
+function addTwo(num: number): number {
+    return num + 2
+}
+
+// function getValue(myVal: number): { // returning type is nor boolean neither string, have to use another type
+//     if (myVal > 5) {
+//         return true
+//     }
+//     return "200 OK"
+// }
+
+// ARROW FUNCTION 
+
+const getHello = (s: string):string => {
+    return ""
+}
+
+const heros = ["thor", "spiderman", "ironman"]
+
+
+
+
+
+
+export {}
